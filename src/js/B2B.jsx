@@ -38,39 +38,21 @@ class Flashcard extends React.Component {
     }
 
     render() {
-        if (this.props.count % 2 == 0) {
-            return <div
-                className='flashcard'
-                onClick={ e => this.handleClick(e)}>
-                <div className='flashcard-photo'
-                     style={{
-                         backgroundImage: this.state.front ? `url(images/bangkoktobali/${this.props.image}.jpg)` : 'none',
-                     }}
-                />
-                <div className='flashcard-description'>
-                    <h2>{this.props.name}</h2>
-                    <h3>{this.props.location}</h3>
-                    <h3>{this.props.country}</h3>
-                    <h4><a href={this.props.info}>More info</a></h4>
-                </div>
+        return <div
+            className='flashcard'
+            onClick={ e => this.handleClick(e)}>
+            <div className='flashcard-photo'
+                 style={{
+                     backgroundImage: this.state.front ? `url(images/bangkoktobali/${this.props.image}.jpg)` : 'none',
+                 }}
+            />
+            <div className='flashcard-description'>
+                <h2>{this.props.name}</h2>
+                <h3>{this.props.location}</h3>
+                <h3>{this.props.country}</h3>
+                <h4><a href={this.props.info}>More info</a></h4>
             </div>
-        } else {
-            return <div
-                className='flashcard'
-                onClick={ e => this.handleClick(e)}>
-                <div className='flashcard-description'>
-                    <h2>{this.props.name}</h2>
-                    <h3>{this.props.location}</h3>
-                    <h3>{this.props.country}</h3>
-                    <h4><a href={this.props.info}>More info</a></h4>
-                </div>
-                <div className='flashcard-photo'
-                     style={{
-                         backgroundImage: this.state.front ? `url(images/bangkoktobali/${this.props.image}.jpg)` : 'none',
-                     }}
-                />
-            </div>
-        }
+        </div>
     }
 }
 
@@ -89,7 +71,7 @@ class Flashcards extends React.Component {
 class PackingList extends React.Component {
     render() {
         return <div className='packingList-container'>
-            <Header text='What to bring' subtext="If you've packed more than a 7kg carry-on, you've packed too much"/>
+            <Header text='What to bring' subtext="If you've packed more than a 7kg carry-on, you've packed too much (cough, cough Rachel and her six pairs of long pants)"/>
             <div className='packingList'>
                 The Core Components:
                 <ul>
